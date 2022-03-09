@@ -1,0 +1,11 @@
+input.onButtonPressed(Button.A, function () {
+    music.playTone(262, music.beat(BeatFraction.Half))
+    music.playTone(392, music.beat(BeatFraction.Whole))
+    basic.showString("Welcome!")
+    pins.digitalWritePin(DigitalPin.P1, 1)
+    pins.servoWritePin(AnalogPin.P2, 90)
+    basic.pause(5000)
+    pins.servoWritePin(AnalogPin.P2, 0)
+    pins.digitalWritePin(DigitalPin.P1, 0)
+})
+pins.servoWritePin(AnalogPin.P2, 0)
